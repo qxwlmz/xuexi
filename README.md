@@ -1,5 +1,4 @@
-## 学习强国在线题库
-
+### 学习强国在线题库
 
 > 接口信息
 
@@ -7,7 +6,7 @@
 接口地址：https://api.myue.gq/xuexi/answer.php
 请求方式：GET/POST
 返回格式：JSON
-请求示例：https://api.myue.gq/xuexi/answer.php?question=太阳能是地球大部分能源的来源&version=2.3.0&category=挑战题
+请求示例：https://api.myue.gq/xuexi/answer.php?question=太阳能是地球大部分能源的来源&version=2.3.1&category=挑战题
 ```
 
 > 请求参数
@@ -15,7 +14,7 @@
 | 名称     | 类型   | 必填 | 备注                     |
 | :------- | :----- | :--- | ------------------------ |
 | question | string | 是   | NULL                     |
-| version  | string | 是   | 2.3.0                    |
+| version  | string | 是   | 2.3.1                    |
 | category | string | 否   | [填空题, 对战题, 挑战题] |
 
 > 返回示例
@@ -52,7 +51,7 @@ function getAnswer(question, types) {
     var res = http.post(url, {
         "question": question,
         "category": types,
-        "version": "2.3.0"
+        "version": "2.3.1"
     });
     var res = res.body.json();
     if (res.length != 0) {
